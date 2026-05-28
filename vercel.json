@@ -20,15 +20,15 @@
         },
         {
             "src": "/assets/(.*)",
-            "dest": "bono-catalog-fe/assets/$1"
+            "dest": "/bono-catalog-fe/assets/$1"
         },
         {
             "src": "/([^/]+\\.[^/]+)",
-            "dest": "bono-catalog-fe/$1"
+            "dest": "/bono-catalog-fe/$1"
         },
         {
             "src": "/(?!api/)(.*)",
-            "dest": "bono-catalog-fe/index.html"
+            "dest": "/bono-catalog-fe/index.html"
         }
     ]
 }
