@@ -23,7 +23,7 @@
         },
         {
             "src": "/(.*)",
-            "dest": "bono-catalog-fe/$1"
+            "dest": "/index.html"
         }
     ]
 }
