@@ -32,7 +32,7 @@ export default function NavBar() {
 
           {/* Right Action */}
           <div className="hidden md:block">
-            <a href="#contact"><NeoButton variant="accent">START CREATING →</NeoButton></a>
+            <a href="/app"><NeoButton variant="accent">LAUNCH APP →</NeoButton></a>
           </div>
 
           {/* Mobile Hamburger Dropdown */}
@@ -59,7 +59,7 @@ export default function NavBar() {
                {link}
              </a>
           ))}
-          <a href="#contact" onClick={() => setIsOpen(false)}><NeoButton variant="accent" size="lg" className="w-full mt-4">START CREATING →</NeoButton></a>
+          <a href="/app" onClick={() => setIsOpen(false)}><NeoButton variant="accent" size="lg" className="w-full mt-4">LAUNCH APP →</NeoButton></a>
         </div>
       )}
     </>

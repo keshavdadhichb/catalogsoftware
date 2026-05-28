@@ -36,7 +36,7 @@ export default function Hero() {
           </p>
 
           <div className="flex flex-col sm:flex-row gap-4 mb-4 lg:mb-0 w-full sm:w-auto">
-            <a href="#contact"><NeoButton variant="accent" size="lg">START CREATING →</NeoButton></a>
+            <a href="/app"><NeoButton variant="accent" size="lg">LAUNCH APP →</NeoButton></a>
             <a href="#gallery"><NeoButton variant="outline" size="lg">VIEW GALLERY</NeoButton></a>
           </div>
         </div>
