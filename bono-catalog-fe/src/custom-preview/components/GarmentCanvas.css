@@ -1,0 +1,40 @@
+.garment-mockup-wrapper {
+    background: white;
+    border-radius: 16px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e5e5e5;
+}
+
+.garment-pixi-container {
+    width: 550px;
+    height: 650px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #f8f8f8;
+    border-radius: 12px;
+    overflow: hidden;
+}
+
+.garment-pixi-container canvas {
+    max-width: 100%;
+    max-height: 100%;
+}
+
+.drag-hint {
+    text-align: center;
+    font-size: 0.75rem;
+    color: #86868b;
+    margin-top: 0.75rem;
+    font-style: italic;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+    .garment-pixi-container {
+        width: 100%;
+        max-width: 500px;
+        height: 550px;
+    }
+}

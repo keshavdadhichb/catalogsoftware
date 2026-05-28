@@ -1,0 +1,160 @@
+/* PoseSelector Component Styles */
+
+.pose-selector {
+    background: var(--bg-secondary, #f5f0e8);
+    border: 1px solid var(--border-color, #d4cbc0);
+    border-radius: 12px;
+    padding: 1rem;
+    margin: 1rem 0;
+}
+
+.pose-selector-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 0.75rem;
+}
+
+.pose-label {
+    font-family: var(--font-headline, 'Playfair Display', serif);
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--text-primary, #1a1a1a);
+}
+
+.pose-loading {
+    font-size: 0.75rem;
+    color: var(--gold, #d4af37);
+    animation: pulse 1.5s ease-in-out infinite;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        opacity: 1;
+    }
+
+    50% {
+        opacity: 0.5;
+    }
+}
+
+.pose-controls {
+    display: flex;
+    align-items: stretch;
+    gap: 0.5rem;
+}
+
+.pose-arrow {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-primary, #fdfbf7);
+    border: 1px solid var(--border-color, #d4cbc0);
+    border-radius: 8px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    color: var(--text-secondary, #4a4a4a);
+}
+
+.pose-arrow:hover:not(:disabled) {
+    background: var(--gold, #d4af37);
+    border-color: var(--gold, #d4af37);
+    color: white;
+}
+
+.pose-arrow:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.pose-current {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 0.25rem;
+    background: var(--bg-primary, #fdfbf7);
+    border: 1px solid var(--border-color, #d4cbc0);
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+}
+
+.pose-current:hover:not(:disabled) {
+    border-color: var(--gold, #d4af37);
+}
+
+.pose-current:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
+
+.pose-name {
+    font-family: var(--font-body, 'Montserrat', sans-serif);
+    font-size: 0.85rem;
+    font-weight: 500;
+    color: var(--text-primary, #1a1a1a);
+}
+
+.pose-count {
+    font-size: 0.7rem;
+    color: var(--text-muted, #9a9a9a);
+}
+
+/* Dropdown */
+.pose-dropdown {
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: calc(100% + 0.5rem);
+    background: var(--bg-primary, #fdfbf7);
+    border: 1px solid var(--border-color, #d4cbc0);
+    border-radius: 12px;
+    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+    z-index: 100;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.pose-selector {
+    position: relative;
+}
+
+.pose-option {
+    width: 100%;
+    display: block;
+    padding: 0.75rem 1rem;
+    border: none;
+    background: transparent;
+    text-align: left;
+    font-family: var(--font-body, 'Montserrat', sans-serif);
+    font-size: 0.85rem;
+    color: var(--text-secondary, #4a4a4a);
+    cursor: pointer;
+    transition: all 0.15s ease;
+}
+
+.pose-option:hover {
+    background: var(--bg-secondary, #f5f0e8);
+}
+
+.pose-option.active {
+    background: var(--gold-light, rgba(212, 175, 55, 0.15));
+    color: var(--gold-dark, #b8972e);
+    font-weight: 500;
+}
+
+.pose-option:first-child {
+    border-radius: 11px 11px 0 0;
+}
+
+.pose-option:last-child {
+    border-radius: 0 0 11px 11px;
+}

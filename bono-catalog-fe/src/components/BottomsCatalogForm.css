@@ -1,0 +1,419 @@
+/* BottomsCatalogForm Styles */
+/* Premium baby-themed aesthetic */
+
+.bottoms-catalog-form {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.bottoms-catalog-form .form-header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.bottoms-catalog-form .form-header h2 {
+    font-size: 1.8rem;
+    color: var(--text-primary);
+    margin-bottom: 0.5rem;
+}
+
+.bottoms-catalog-form .form-header p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.bottoms-catalog-form .form-section {
+    background: var(--surface-elevated);
+    border-radius: 16px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+    border: 1px solid var(--border-light);
+}
+
+.bottoms-catalog-form .form-section h3 {
+    font-size: 1rem;
+    color: var(--text-primary);
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.bottoms-catalog-form .section-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.bottoms-catalog-form .section-header h3 {
+    margin-bottom: 0;
+}
+
+.bottoms-catalog-form .form-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+@media (max-width: 600px) {
+    .bottoms-catalog-form .form-row {
+        grid-template-columns: 1fr;
+    }
+}
+
+.bottoms-catalog-form .form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+}
+
+.bottoms-catalog-form .form-group label {
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+}
+
+.bottoms-catalog-form .form-group input {
+    padding: 0.75rem 1rem;
+    border: 1px solid var(--border-light);
+    border-radius: 10px;
+    font-size: 0.95rem;
+    background: var(--surface);
+    color: var(--text-primary);
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+.bottoms-catalog-form .form-group input:focus {
+    outline: none;
+    border-color: var(--gold);
+    box-shadow: 0 0 0 3px rgba(212, 175, 55, 0.15);
+}
+
+/* Logo Upload */
+.bottoms-catalog-form .logo-upload {
+    width: 100%;
+}
+
+.bottoms-catalog-form .logo-preview {
+    position: relative;
+    width: 120px;
+    height: 120px;
+    border-radius: 12px;
+    overflow: hidden;
+    background: var(--surface);
+    border: 2px solid var(--border-light);
+}
+
+.bottoms-catalog-form .logo-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    padding: 0.5rem;
+}
+
+.bottoms-catalog-form .logo-preview button {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.bottoms-catalog-form .upload-zone {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 1.5rem;
+    border: 2px dashed var(--border-light);
+    border-radius: 12px;
+    cursor: pointer;
+    background: var(--surface);
+    transition: border-color 0.2s, background 0.2s;
+    gap: 0.5rem;
+}
+
+.bottoms-catalog-form .upload-zone:hover {
+    border-color: var(--gold);
+    background: rgba(212, 175, 55, 0.05);
+}
+
+.bottoms-catalog-form .upload-zone span {
+    color: var(--text-secondary);
+    font-size: 0.9rem;
+}
+
+/* Style Options */
+.bottoms-catalog-form .style-options {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 0.75rem;
+}
+
+@media (max-width: 600px) {
+    .bottoms-catalog-form .style-options {
+        grid-template-columns: 1fr;
+    }
+}
+
+.bottoms-catalog-form .style-option {
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    border: 2px solid var(--border-light);
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s;
+    background: var(--surface);
+}
+
+.bottoms-catalog-form .style-option:hover {
+    border-color: var(--gold-muted);
+}
+
+.bottoms-catalog-form .style-option.selected {
+    border-color: var(--gold);
+    background: rgba(212, 175, 55, 0.08);
+}
+
+.bottoms-catalog-form .style-option input {
+    display: none;
+}
+
+.bottoms-catalog-form .style-name {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text-primary);
+    margin-bottom: 0.25rem;
+}
+
+.bottoms-catalog-form .style-desc {
+    font-size: 0.75rem;
+    color: var(--text-tertiary);
+}
+
+/* Add Button */
+.bottoms-catalog-form .add-btn {
+    padding: 0.5rem 1rem;
+    background: transparent;
+    border: 1px solid var(--gold);
+    color: var(--gold);
+    border-radius: 8px;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.bottoms-catalog-form .add-btn:hover {
+    background: var(--gold);
+    color: white;
+}
+
+/* Product Card */
+.bottoms-catalog-form .product-card {
+    background: var(--surface);
+    border: 1px solid var(--border-light);
+    border-radius: 12px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+}
+
+.bottoms-catalog-form .product-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding-bottom: 0.75rem;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.bottoms-catalog-form .product-header span {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+.bottoms-catalog-form .remove-btn {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    background: rgba(255, 100, 100, 0.1);
+    color: #ff6464;
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+    transition: background 0.2s;
+}
+
+.bottoms-catalog-form .remove-btn:hover {
+    background: rgba(255, 100, 100, 0.2);
+}
+
+.bottoms-catalog-form .product-content {
+    display: grid;
+    grid-template-columns: 140px 1fr;
+    gap: 1rem;
+}
+
+@media (max-width: 500px) {
+    .bottoms-catalog-form .product-content {
+        grid-template-columns: 1fr;
+    }
+}
+
+.bottoms-catalog-form .product-image-upload {
+    width: 140px;
+    height: 180px;
+}
+
+.bottoms-catalog-form .product-upload {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.bottoms-catalog-form .product-upload span:first-child {
+    font-size: 2rem;
+    margin-bottom: 0.5rem;
+}
+
+.bottoms-catalog-form .image-preview {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 10px;
+    overflow: hidden;
+    background: var(--surface-elevated);
+}
+
+.bottoms-catalog-form .image-preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.bottoms-catalog-form .image-preview button {
+    position: absolute;
+    top: 4px;
+    right: 4px;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: rgba(0, 0, 0, 0.6);
+    color: white;
+    border: none;
+    cursor: pointer;
+    font-size: 12px;
+}
+
+.bottoms-catalog-form .product-details {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+/* Checkbox Option */
+.bottoms-catalog-form .checkbox-option {
+    display: flex;
+    align-items: center;
+    gap: 0.75rem;
+    cursor: pointer;
+}
+
+.bottoms-catalog-form .checkbox-option input {
+    width: 18px;
+    height: 18px;
+    accent-color: var(--gold);
+}
+
+.bottoms-catalog-form .checkbox-option span {
+    font-size: 0.9rem;
+    color: var(--text-secondary);
+}
+
+/* View Selection */
+.bottoms-catalog-form .views-selection {
+    margin-top: 0.5rem;
+    padding-top: 0.75rem;
+    border-top: 1px dashed var(--border-light);
+}
+
+.bottoms-catalog-form .view-label {
+    display: block;
+    font-size: 0.85rem;
+    color: var(--text-secondary);
+    font-weight: 500;
+    margin-bottom: 0.5rem;
+}
+
+.bottoms-catalog-form .view-toggles {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.bottoms-catalog-form .view-chip {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    padding: 0.4rem 0.8rem;
+    border-radius: 20px;
+    border: 1px solid var(--border-light);
+    background: var(--surface);
+    font-size: 0.8rem;
+    cursor: pointer;
+    transition: all 0.2s;
+    user-select: none;
+}
+
+.bottoms-catalog-form .view-chip:hover {
+    border-color: var(--gold-muted);
+}
+
+.bottoms-catalog-form .view-chip.active {
+    background: rgba(212, 175, 55, 0.1);
+    border-color: var(--gold);
+    color: var(--gold);
+    font-weight: 500;
+}
+
+.bottoms-catalog-form .view-chip input {
+    display: none;
+}
+
+/* Submit Button */
+.bottoms-catalog-form .submit-btn {
+    width: 100%;
+    padding: 1rem 2rem;
+    background: linear-gradient(135deg, var(--gold) 0%, #c9a227 100%);
+    color: white;
+    border: none;
+    border-radius: 12px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s;
+    margin-top: 1rem;
+}
+
+.bottoms-catalog-form .submit-btn:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 30px rgba(212, 175, 55, 0.3);
+}
+
+.bottoms-catalog-form .submit-btn:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
