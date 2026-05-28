@@ -1,0 +1,25 @@
+# Dependencies
+node_modules/
+venv/
+.env
+
+# Builds and cache
+dist/
+__pycache__/
+*.pyc
+
+# Local runtime outputs and jobs
+outputs/
+batch_jobs/
+batch_results/
+pro_jobs/
+pro_results/
+cache/
+
+# System and backup files
+.DS_Store
+.git_backup/
+*.zip
+*.png
+*.jpg
+*.webp
