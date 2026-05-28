@@ -1,0 +1,29 @@
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "bono-catalog-be/main.py",
+            "use": "@vercel/python"
+        },
+        {
+            "src": "bono-catalog-fe/package.json",
+            "use": "@vercel/static-build",
+            "config": {
+                "distDir": "dist"
+            }
+        }
+    ],
+    "routes": [
+        {
+            "src": "/api/(.*)",
+            "dest": "bono-catalog-be/main.py"
+        },
+        {
+            "handle": "filesystem"
+        },
+        {
+            "src": "/(.*)",
+            "dest": "bono-catalog-fe/$1"
+        }
+    ]
+}
