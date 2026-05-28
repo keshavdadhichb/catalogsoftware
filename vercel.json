@@ -19,11 +19,16 @@
             "dest": "bono-catalog-be/main.py"
         },
         {
-            "handle": "filesystem"
+            "src": "/assets/(.*)",
+            "dest": "bono-catalog-fe/assets/$1"
         },
         {
-            "src": "/(.*)",
-            "dest": "/index.html"
+            "src": "/([^/]+\\.[^/]+)",
+            "dest": "bono-catalog-fe/$1"
+        },
+        {
+            "src": "/(?!api/)(.*)",
+            "dest": "bono-catalog-fe/index.html"
         }
     ]
 }
