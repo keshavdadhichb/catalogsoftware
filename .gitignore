@@ -19,7 +19,7 @@ cache/
 # System and backup files
 .DS_Store
 .git_backup/
-*.zip
-*.png
-*.jpg
-*.webp
+/*.zip
+/*.png
+/*.jpg
+/*.webp
